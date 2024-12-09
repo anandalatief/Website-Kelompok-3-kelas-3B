@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        .register-container {
+            width: 400px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #4facfe; 
+        }
+
+        .register-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #4facfe;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #00509e;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #90e0ef;
+            border-radius: 5px;
+            background-color: #f1faff;
+            color: #023047;
+        }
+
+        .form-group textarea {
+            height: 100px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #4facfe; 
+            outline: none;
+            background-color: #e6f6ff;
+        }
+
+        .form-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .form-button button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #4facfe; 
+            color: white;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .form-button button:hover {
+            background-color: #023e8a; 
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>REGISTER</h2>
+        <form action="login.html" method="post">
+            <div class="form-group">
+                <label for="fullname">Nama Lengkap</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Masukkan Nama Lengkap" required>
+            </div>
+            <div class="form-group">
+                <label for="npm">NPM</label>
+                <input type="text" id="npm" name="npm" placeholder="Masukkan NPM" required>
+            </div>
+            <div class="form-group">
+                <label for="birthdate">Tanggal Lahir</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan Email" required>
+            </div>
+            <div class="form-group">
+                <label for="jurusan">Jurusan</label>
+                <select id="jurusan" name="jurusan" required>
+                    <option value="" disabled selected>Pilih Jurusan</option>
+                    <option value="Jurusan Teknik Informatika (S1)">Jurusan Teknik Informatika (S1)</option>
+                    <option value="Jurusan Teknik Perminyakan (S1)">Jurusan Teknik Perminyakan (S1)</option>
+                    <option value="Jurusan Teknik Mesin (S1)">Jurusan Teknik Mesin (S1)</option>
+                    <option value="Jurusan Teknik Perencanaan Wilayah dan Kota (S1)">Jurusan Teknik Perencanaan Wilayah dan Kota (S1)</option>
+                    <option value="Jurusan Teknik Geologi (S1)">Jurusan Teknik Geologi (S1)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="phone">No HP</label>
+                <input type="tel" id="phone" name="phone" placeholder="Masukkan No HP" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Deskripsi Diri</label>
+                <textarea id="description" name="description" placeholder="Tuliskan deskripsi singkat tentang diri Anda" required></textarea>
+            </div>
+            <div class="form-button">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

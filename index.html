@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+        }
+
+        header {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        header .cta {
+            display: flex;
+            gap: 15px;
+        }
+        header .cta button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background: white;
+            color: #4facfe;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        header .cta button:hover {
+            background: #4facfe;
+            color: white;
+        }
+
+        .horizontal-nav {
+            display: flex;
+            justify-content: center;
+            background: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 5;
+        }
+        .horizontal-nav a {
+            text-decoration: none;
+            padding: 15px 20px;
+            color: #4facfe;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .horizontal-nav a:hover {
+            background: #4facfe;
+            color: white;
+        }
+
+        .vertical-nav {
+            width: 250px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 790%;
+            background: #ffffff;
+            box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            padding-top: 160px; 
+            z-index: 1;
+        }
+        .vertical-nav a {
+            text-decoration: none;
+            padding: 15px;
+            color: #4facfe;
+            font-weight: bold;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+        .vertical-nav a:hover {
+            background: #4facfe;
+            color: white;
+        }
+
+        main {
+            margin-left: 270px;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        .processor-description {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .processor-description img {
+            width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .processor-description p {
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+
+        .processor-box {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 20px;
+        }
+        .processor-box img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .processor-box div {
+            flex-grow: 1;
+        }
+        .processor-box h3 {
+            font-size: 22px;
+            color: #4facfe;
+        }
+        .processor-box p {
+            font-size: 16px;
+            color: #555;
+        }
+        .processor-box .specifications {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        footer {
+            background: #4facfe;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1;
+        }
+        
+        .processor-comparison {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 50px;
+        padding: 20px;
+    }
+
+    .comparison-box {
+        background: #fff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        width: 45%;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+
+    .comparison-box h3 {
+        font-size: 24px;
+        color: #4facfe;
+    }
+
+    .comparison-box h4 {
+        font-size: 20px;
+        color: #333;
+        margin-top: 20px;
+    }
+
+    .comparison-box ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        font-size: 16px;
+        color: #555;
+    }
+
+    .comparison-box .specifications {
+        font-size: 14px;
+        color: #777;
+        margin-top: 10px;
+    }
+
+    .comparison-box.intel {
+        background: #f0f8ff;
+    }
+
+    .comparison-box.amd {
+        background: #fbe2e2;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        background-color: #4facfe;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: center;
+        display: block;
+        margin-top: 20px;
+        width: 100%;
+        transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+        background-color: #00b5e2;
+    }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Profile</div>
+        <div class="cta">
+            <a href="Registry.html">
+                <button>Registry</button>
+            </a>
+            <a href="login.html">
+                <button>Login</button>
+            </a>
+        </div>
+    </header>
+
+    <nav class="horizontal-nav">
+        <a href="index.html">Home</a>
+        <a href="information.html">Information</a>
+        <a href="Galerry.html">Gallery</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+
+    <div class="vertical-nav">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#Intel-Processors">Intel Processors</a>
+        <a href="#AMD-Processors">AMD Processors</a>
+        <a href="#Perbandingan">Perbandingan</a>
+    </div>
+
+    <main>
+        <h1>Apa itu Processor?</h1>
+        <div class="processor-description">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qFnccCvS318?si=EvMCwFtTK9e6afkc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>
+                Prosesor laptop adalah otak dari sebuah laptop yang bertanggung jawab untuk menjalankan perintah dan menjalankan aplikasi. Di pasaran, ada dua merek prosesor utama yang dominan: Intel dan AMD. 
+                Intel terkenal dengan prosesor seri Core, yang terdiri dari Core i3, i5, i7, dan i9. Sementara AMD dikenal dengan seri Ryzen-nya yang menawarkan kinerja hebat dengan harga yang lebih terjangkau. 
+                Memilih prosesor yang tepat sangat penting untuk memastikan laptop Anda dapat menangani tugas-tugas yang Anda perlukan, seperti gaming, pengeditan video, atau pekerjaan sehari-hari.
+            </p>
+        </div>
+        <br><br><br><br><br><br>
+        <h1 id="Intel-Processors">Jenis Processors Intel</h1>
+        <div class="processor-box">
+            <img src="intel-core-i3.png" alt="Intel Core i3 Gen 1">
+            <div>
+                <h3>Intel Core i3 (Generasi 1)</h3>
+                <p><strong>Seri Prosesor:</strong> Intel Core i3 (Generasi 1)</p>
+                <p><strong>Deskripsi:</strong> Prosesor pertama dari Intel yang menggunakan mikroarsitektur Nehalem, menawarkan performa yang baik untuk penggunaan sehari-hari dengan harga terjangkau.</p>
+                <div class="specifications">
+                    <strong>Spesifikasi:</strong><br>
+                    - 2 cores, 4 threads<br>
+                    - 2.93 GHz base clock<br>
+                    - 4MB L3 Cache<br>
+                    - 32nm manufacturing process
+                </div>
+            </div>
+        </div>
+        
+        <div class="processor-box">
+            <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2022/3/29/42016456-21a9-4dc5-8ee7-6f404e2a9df4.jpg" alt="Intel Core i5 Gen 4">
+            <div>
+                <h3>Intel Core i5 (Generasi 4)</h3>
+                <p><strong>Seri Prosesor:</strong> Intel Core i5 (Generasi 4)</p>
+                <p><strong>Deskripsi:</strong> Menggunakan mikroarsitektur Haswell dengan peningkatan kinerja grafis dan efisiensi daya yang lebih baik dibandingkan dengan generasi sebelumnya.</p>
+                <div class="specifications">
+                    <strong>Spesifikasi:</strong><br>
+                    - 4 cores, 4 threads<br>
+                    - 3.2 GHz base clock<br>
+                    - 6MB L3 Cache<br>
+                    - 22nm manufacturing process
+                </div>
+            </div>
+        </div>
+        
+        <div class="processor-box">
+            <img src="Intel-Core-i7.jpg" alt="Intel Core i7 Gen 7">
+            <div>
+                <h3>Intel Core i7 (Generasi 7)</h3>
+                <p><strong>Seri Prosesor:</strong> Intel Core i7 (Generasi 7)</p>
+                <p><strong>Deskripsi:</strong> Dengan mikroarsitektur Kaby Lake, prosesor ini menawarkan kinerja lebih cepat untuk gaming dan pengeditan video dengan peningkatan efisiensi daya dan kemampuan overclocking.</p>
+                <div class="specifications">
+                    <strong>Spesifikasi:</strong><br>
+                    - 4 cores, 8 threads<br>
+                    - 3.6 GHz base clock, 4.2 GHz Turbo Boost<br>
+                    - 8MB L3 Cache<br>
+                    - 14nm manufacturing process
+                </div>
+            </div>
+        </div>
+        
+        <div class="processor-box">
+            <img src="https://asset.kompas.com/crops/1Pycl9NtGdGACRFwLPxSLqn_B-s=/0x0:800x533/1200x800/data/photo/2018/10/09/3926926917.jpg" alt="Intel Core i9 Gen 9">
+            <div>
+                <h3>Intel Core i9 (Generasi 9)</h3>
+                <p><strong>Seri Prosesor:</strong> Intel Core i9 (Generasi 9)</p>
+                <p><strong>Deskripsi:</strong> Prosesor kelas atas dengan 8 inti dan 16 thread, ideal untuk gaming kelas berat, rendering, dan aplikasi profesional yang membutuhkan kinerja tinggi.</p>
+                <div class="specifications">
+                    <strong>Spesifikasi:</strong><br>
+                    - 8 cores, 16 threads<br>
+                    - 3.6 GHz base clock, 5.0 GHz Turbo Boost<br>
+                    - 16MB L3 Cache<br>
+                    - 14nm manufacturing process
+                </div>
+            </div>
+        </div>
+        
+        <div class="processor-box">
+            <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//112/MTA-65859673/intel_processor_intel_core_i5_10400f_tray_lga_1200_gen_10_full01_sg567xn9.jpg" alt="Intel Core i5 Gen 10">
+            <div>
+                <h3>Intel Core i5 (Generasi 10)</h3>
+                <p><strong>Seri Prosesor:</strong> Intel Core i5 (Generasi 10)</p>
+                <p><strong>Deskripsi:</strong> Dengan mikroarsitektur Comet Lake, prosesor ini menawarkan kinerja tinggi dengan lebih banyak core dan thread dibandingkan generasi sebelumnya, cocok untuk tugas multitasking dan gaming.</p>
+                <div class="specifications">
+                    <strong>Spesifikasi:</strong><br>
+                    - 6 cores, 12 threads<br>
+                    - 3.1 GHz base clock, 4.8 GHz Turbo Boost<br>
+                    - 12MB L3 Cache<br>
+                    - 14nm manufacturing process
+                </div>
+            </div>
+        </div>
+        
+        <div class="processor-box">
+            <img src="Intel-Core-i7(11).jpg" alt="Intel Core i7 Gen 11">
+            <div>
+                <h3>Intel Core i7 (Generasi 11)</h3>
+                <p><strong>Seri Prosesor:</strong> Intel Core i7 (Generasi 11)</p>
+                <p><strong>Deskripsi:</strong> Menggunakan mikroarsitektur Willow Cove, prosesor ini membawa peningkatan performa signifikan dalam kinerja single-core dan multi-core, serta fitur grafis terintegrasi Intel Iris Xe yang lebih baik.</p>
+                <div class="specifications">
+                    <strong>Spesifikasi:</strong><br>
+                    - 8 cores, 16 threads<br>
+                    - 3.6 GHz base clock, 4.9 GHz Turbo Boost<br>
+                    - 12MB L3 Cache<br>
+                    - 10nm SuperFin manufacturing process
+                </div>
+            </div>
+        </div>
+        
+        <div class="processor-box">
+            <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2022/10/20/1a6973b2-7cc0-4bc8-ba33-7783dab2bf0d.jpg" alt="Intel Core i9 Gen 13">
+            <div>
+                <h3>Intel Core i9 (Generasi 13)</h3>
+                <p><strong>Seri Prosesor:</strong> Intel Core i9 (Generasi 13)</p>
+                <p><strong>Deskripsi:</strong> Prosesor terbaru dengan performa luar biasa untuk gaming 4K, aplikasi berat, dan rendering. Dikenal dengan jumlah core dan thread yang sangat banyak serta kemampuan multitasking yang sangat kuat.</p>
+                <div class="specifications">
+                    <strong>Spesifikasi:</strong><br>
+                    - 8 cores, 16 threads<br>
+                    - 3.0 GHz base clock, 5.6 GHz Turbo Boost<br>
+                    - 16MB L3 Cache<br>
+                    - 10nm process
+                </div>
+            </div>
+        </div>
+
+        <br><br><br><br><br><br>
+        <h1 id="AMD-Processors">Jenis Processors AMD</h1>
+        <div class="processor-box">
+            <img src="https://sekilasit.com/wp-content/uploads/2022/08/AMD-Athlon-64-Feat.jpg" alt="AMD Athlon 64">
+            <div>
+                <h3>AMD Athlon 64</h3>
+                <p><strong>Seri Prosesor:</strong> AMD Athlon 64</p>
+                <p><strong>Deskripsi:</strong> Prosesor pertama dari AMD yang mendukung arsitektur 64-bit, menawarkan performa yang baik untuk gaming dan aplikasi profesional pada masanya.</p>
+                <div class="specifications">
+                    <strong>Spesifikasi:</strong><br>
+                    - 1 hingga 2 cores<br>
+                    - 1.8 GHz hingga 2.4 GHz base clock<br>
+                    - 512MB L2 Cache<br>
+                    - 130nm manufacturing process
+                </div>
+            </div>
+        </div>
+        
+        <div class="processor-box">
+            <img src="AMD-Phenom-II-X4.jpeg" alt="AMD Phenom II X4">
+            <div>
+                <h3>AMD Phenom II X4</h3>
+                <p><strong>Seri Prosesor:</strong> AMD Phenom II X4</p>
+                <p><strong>Deskripsi:</strong> Menggunakan mikroarsitektur K10, Phenom II X4 menawarkan 4 inti untuk kinerja multitasking dan gaming dengan harga yang terjangkau di masanya.</p>
+                <div class="specifications">
+                    <strong>Spesifikasi:</strong><br>
+                    - 4 cores, 4 threads<br>
+                    - 3.0 GHz base clock<br>
+                    - 6MB L3 Cache<br>
+                    - 45nm manufacturing process
+                </div>
+            </div>
+        </div>
+        
+        <div class="processor-box">
+            <img src="https://ae01.alicdn.com/kf/S155d5ab821f64f518781918b296188464/AMD-Ryzen-5-1600-R5-1600-R5-PRO-1600-3-2-GHz-Enam-core-Dua-Belas.jpg" alt="AMD Ryzen 5 1600">
+            <div>
+                <h3>AMD Ryzen 5 1600</h3>
+                <p><strong>Seri Prosesor:</strong> AMD Ryzen 5 1600</p>
+                <p><strong>Deskripsi:</strong> Prosesor generasi pertama dari keluarga Ryzen, menawarkan 6 inti dan 12 thread, menjadi pilihan yang sangat kompetitif dalam performa dan harga di pasar mid-range.</p>
+                <div class="specifications">
+                    <strong>Spesifikasi:</strong><br>
+                    - 6 cores, 12 threads<br>
+                    - 3.2 GHz base clock, 3.6 GHz Turbo Boost<br>
+                    - 16MB L3 Cache<br>
+                    - 14nm manufacturing process
+                </div>
+            </div>
+        </div>
+        
+        <div class="processor-box">
+            <img src="AMD-Ryzen-7-2700X.avif" alt="AMD Ryzen 7 2700X">
+            <div>
+                <h3>AMD Ryzen 7 2700X</h3>
+                <p><strong>Seri Prosesor:</strong> AMD Ryzen 7 2700X</p>
+                <p><strong>Deskripsi:</strong> Prosesor ini menawarkan 8 inti dan 16 thread, ideal untuk gaming dan aplikasi berat seperti pengeditan video dan rendering, dengan performa yang setara dengan prosesor Intel di kelasnya.</p>
+                <div class="specifications">
+                    <strong>Spesifikasi:</strong><br>
+                    - 8 cores, 16 threads<br>
+                    - 3.7 GHz base clock, 4.3 GHz Turbo Boost<br>
+                    - 16MB L3 Cache<br>
+                    - 12nm manufacturing process
+                </div>
+            </div>
+        </div>
+        
+        <div class="processor-box">
+            <img src="https://ae01.alicdn.com/kf/S9ab1b67895a649209edde5ad98738fe1N.jpg_960x960.jpg" alt="AMD Ryzen 5 3600">
+            <div>
+                <h3>AMD Ryzen 5 3600</h3>
+                <p><strong>Seri Prosesor:</strong> AMD Ryzen 5 3600</p>
+                <p><strong>Deskripsi:</strong> Dengan 6 inti dan 12 thread, prosesor ini menawarkan kinerja luar biasa untuk gaming dan multitasking, serta efisiensi daya yang sangat baik pada arsitektur 12nm.</p>
+                <div class="specifications">
+                    <strong>Spesifikasi:</strong><br>
+                    - 6 cores, 12 threads<br>
+                    - 3.6 GHz base clock, 4.2 GHz Turbo Boost<br>
+                    - 32MB L3 Cache<br>
+                    - 12nm manufacturing process
+                </div>
+            </div>
+        </div>
+        
+        <div class="processor-box">
+            <img src="AMD-Ryzen-7-5800X.jpg" alt="AMD Ryzen 7 5800X">
+            <div>
+                <h3>AMD Ryzen 7 5800X</h3>
+                <p><strong>Seri Prosesor:</strong> AMD Ryzen 7 5800X</p>
+                <p><strong>Deskripsi:</strong> Dengan arsitektur Zen 3, prosesor ini memberikan peningkatan kinerja signifikan dalam gaming dan aplikasi multitasking. 8 inti dan 16 thread membuatnya ideal untuk pengguna profesional dan gamer.</p>
+                <div class="specifications">
+                    <strong>Spesifikasi:</strong><br>
+                    - 8 cores, 16 threads<br>
+                    - 3.8 GHz base clock, 4.7 GHz Turbo Boost<br>
+                    - 32MB L3 Cache<br>
+                    - 7nm manufacturing process
+                </div>
+            </div>
+        </div>
+        
+        <div class="processor-box">
+            <img src="https://ae01.alicdn.com/kf/S6d29d704eada49838ce6d32a909effceQ/Baru-AMD-Ryzen-9-7950X-R9-7950X-16-Core-Prosesor-Desktop-32-Thread-5NM-L3-64M.jpg" alt="AMD Ryzen 9 7950X">
+            <div>
+                <h3>AMD Ryzen 9 7950X</h3>
+                <p><strong>Seri Prosesor:</strong> AMD Ryzen 9 7950X</p>
+                <p><strong>Deskripsi:</strong> Prosesor high-end dengan 16 inti dan 32 thread, memberikan performa terbaik untuk gaming 4K, aplikasi rendering, dan tugas profesional yang sangat menuntut. Peningkatan kinerja luar biasa pada arsitektur Zen 4.</p>
+                <div class="specifications">
+                    <strong>Spesifikasi:</strong><br>
+                    - 16 cores, 32 threads<br>
+                    - 4.5 GHz base clock, 5.7 GHz Turbo Boost<br>
+                    - 64MB L3 Cache<br>
+                    - 5nm manufacturing process
+                </div>
+            </div>
+        </div>
+
+
+<div class="processor-comparison">
+    <div class="comparison-box intel">
+        <h3 id="Perbandingan">Intel Core i7 12700K</h3>
+        <h4>Kelebihan:</h4>
+        <ul>
+            <li>Kinerja tinggi untuk gaming dan multitasking</li>
+            <li>Teknologi Intel Turbo Boost untuk performa maksimal</li>
+            <li>Dukungan untuk overclocking (unlocked)</li>
+            <li>Lebih efisien dalam aplikasi single-threaded</li>
+        </ul>
+        <h4>Kekurangan:</h4>
+        <ul>
+            <li>Harga relatif lebih mahal dibandingkan dengan AMD Ryzen sekelasnya</li>
+            <li>Pemakaian daya yang lebih tinggi pada beban penuh</li>
+            <li>Memerlukan motherboard yang mendukung chipset terbaru</li>
+        </ul>
+        <a href="https://www.intel.com" target="_blank">
+            <button class="cta-button">Kunjungi Website Intel</button>
+        </a>
+    </div>
+
+    <div class="comparison-box amd">
+        <h3>AMD Ryzen 7 5800X</h3>
+        <h4>Kelebihan:</h4>
+        <ul>
+            <li>Performa luar biasa dalam aplikasi multi-threaded</li>
+            <li>Harga lebih terjangkau dibandingkan prosesor Intel sekelasnya</li>
+            <li>Efisiensi daya yang lebih baik</li>
+            <li>Lebih baik dalam rendering dan aplikasi yang membutuhkan banyak core</li>
+        </ul>
+        <h4>Kekurangan:</h4>
+        <ul>
+            <li>Kinerja sedikit lebih rendah dalam aplikasi single-threaded dibandingkan Intel</li>
+            <li>Tidak mendukung overclocking pada model non-X</li>
+            <li>Memerlukan motherboard yang mendukung soket AM4 yang lebih lama</li>
+        </ul>
+        <a href="https://www.amd.com" target="_blank">
+            <button class="cta-button">Kunjungi Website AMD</button>
+        </a>
+    </div>
+</div>
+        
+        
+    </main>
+
+    <footer>
+        &copy; 2024 Kelompok 3. All rights reserved.
+    </footer>
+
+</body>
+</html>

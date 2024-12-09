@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+        }
+
+        header {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        header .cta {
+            display: flex;
+            gap: 15px;
+        }
+        header .cta button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background: white;
+            color: #4facfe;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        header .cta button:hover {
+            background: #4facfe;
+            color: white;
+        }
+
+        .horizontal-nav {
+            display: flex;
+            justify-content: center;
+            background: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 5;
+        }
+        .horizontal-nav a {
+            text-decoration: none;
+            padding: 15px 20px;
+            color: #4facfe;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .horizontal-nav a:hover {
+            background: #4facfe;
+            color: white;
+        }
+
+        .vertical-nav {
+            width: 250px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 390%;
+            background: #ffffff;
+            box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            padding-top: 140px; 
+            z-index: 1;
+        }
+        .vertical-nav a {
+            text-decoration: none;
+            padding: 15px;
+            color: #4facfe;
+            font-weight: bold;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+        .vertical-nav a:hover {
+            background: #4facfe;
+            color: white;
+        }
+
+        main {
+            margin-left: 270px;
+            padding: 30px;
+            background: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        h1, h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .info-box {
+            background: #f4f4f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        .info-box h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .cta-button {
+            background-color: #4facfe;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #00f2fe;
+        }
+
+        footer {
+            background: #4facfe;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Profile</div>
+        <div class="cta">
+            <a href="Registry.html">
+                <button>Registry</button>
+            </a>
+            <a href="login.html">
+                <button>Login</button>
+            </a>
+        </div>
+    </header>
+
+    <nav class="horizontal-nav">
+        <a href="index.html">Home</a>
+        <a href="information.html">Information</a>
+        <a href="Galerry.html">Gallery</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+
+    <div class="vertical-nav">
+        <a href="#Pengenalan-Prosesor">Pengenalan Prosesor</a>
+        <a href="#Fungsi-Utama-Prosesor">Fungsi Utama Prosesor</a>
+        <a href="#Komponen-Utama-dalam-Prosesor">Komponen Utama dalam Prosesor</a>
+        <a href="#Jenis-jenis-Prosesor">Jenis-jenis Prosesor</a>
+        <a href="#Perbandingan-Intel-vs-AMD">Perbandingan Intel vs AMD</a>
+    </div>
+
+    <main>
+        <div class="image-container" style="text-align: center;">
+            <img src="https://imam.web.id/wp-content/uploads/2023/03/se.299-Comparison-of-Computer-Processor-Manufacturers-Intel-AMD-and-Others.jpg" alt="Gambar Prosesor" style="width:50%; height:auto; margin-bottom: 20px;">
+        </div>        
+        <h1 id="Pengenalan-Prosesor">Pengenalan Prosesor</h1>
+        <p>Prosesor atau CPU (Central Processing Unit) adalah salah satu komponen paling penting dalam sebuah sistem komputer. Prosesor berfungsi sebagai pusat kendali untuk menjalankan instruksi yang diterima dari perangkat lunak dan memproses data sesuai dengan perintah tersebut. Oleh karena itu, prosesor sering disebut sebagai "otak" dari komputer. Dalam dunia teknologi, semakin cepat dan kuat prosesor, semakin baik kinerja komputer tersebut dalam menjalankan berbagai aplikasi, mulai dari yang sederhana hingga aplikasi dengan kebutuhan komputasi tinggi seperti pengeditan video, pemrograman, dan permainan video kelas atas.</p>
+    
+        <p>Prosesor memiliki beberapa peran utama, di antaranya adalah memproses data, menjalankan aplikasi, dan mengatur aliran informasi antar komponen perangkat keras lainnya. Prosesor tidak hanya bekerja dengan cepat, tetapi juga dengan efisien, menggunakan berbagai teknologi seperti core multiple, cache, dan instruksi khusus untuk mempercepat pemrosesan data. Selain itu, perkembangan teknologi prosesor terus berkembang dari tahun ke tahun, dengan peningkatan yang signifikan dalam hal jumlah core, kecepatan clock, serta efisiensi daya.</p>
+    
+        <div class="info-box">
+            <h3 id="Fungsi-Utama-Prosesor">Fungsi Utama Prosesor</h3>
+            <p>Prosesor memiliki beberapa fungsi utama yang sangat penting untuk memastikan komputer dapat bekerja dengan baik. Beberapa fungsi utama prosesor adalah sebagai berikut:</p>
+            <ul>
+                <li><strong>Pengolahan Instruksi:</strong> Prosesor membaca dan mengeksekusi instruksi yang diterima dari perangkat lunak atau aplikasi yang dijalankan. Instruksi ini bisa berupa operasi aritmatika, logika, atau pengendalian aliran program. Setiap instruksi yang diterima diproses secara berurutan, dan hasil dari instruksi tersebut digunakan untuk memodifikasi data yang ada.</li>
+                <li><strong>Koordinasi Antara Komponen:</strong> Prosesor bertanggung jawab untuk mengontrol komunikasi antara berbagai komponen sistem komputer, seperti memori, kartu grafis, dan perangkat input/output (I/O). Sebagai contoh, prosesor mengambil data dari memori utama dan memanipulasinya sesuai dengan perintah yang diberikan, kemudian mengirimkan hasilnya kembali ke perangkat penyimpanan atau menampilkannya ke layar monitor.</li>
+                <li><strong>Pengolahan Data dan Kinerja Multi-tasking:</strong> Prosesor juga menangani pemrosesan berbagai jenis data dalam berbagai format, seperti gambar, teks, angka, dan suara. Dalam prosesor modern, kinerja multitasking semakin meningkat, karena adanya teknologi multi-core yang memungkinkan pengolahan banyak data secara simultan. Hal ini sangat penting untuk aplikasi yang memerlukan banyak proses sekaligus, seperti gaming, pengeditan video, atau komputasi ilmiah.</li>
+            </ul>
+            <p>Tanpa prosesor, komputer tidak akan dapat menjalankan program atau aplikasi, karena semua instruksi yang diberikan kepada komputer bergantung pada prosesor untuk dieksekusi. Dengan kata lain, prosesor adalah komponen inti yang membuat komputer berfungsi.</p>
+        </div>
+    
+        <div class="info-box">
+            <h3 id="Komponen-Utama-dalam-Prosesor">Komponen Utama dalam Prosesor</h3>
+            <p>Prosesor terdiri dari beberapa komponen utama yang bekerja bersama-sama untuk memastikan prosesor berfungsi dengan baik. Komponen-komponen ini termasuk:</p>
+            <ul>
+                <li><strong>Core (Inti Prosesor):</strong> Core adalah unit pemrosesan dasar dalam prosesor. Setiap core dapat mengeksekusi instruksi secara independen. Prosesor multi-core dapat mengeksekusi beberapa instruksi secara paralel, meningkatkan kinerja keseluruhan prosesor. Prosesor dengan lebih banyak core, seperti quad-core (4 core), hexa-core (6 core), atau octa-core (8 core), dapat menangani lebih banyak tugas secara simultan, sangat berguna untuk aplikasi yang membutuhkan banyak pengolahan data, seperti game atau perangkat lunak pengeditan video.</li>
+                <li><strong>Clock Speed:</strong> Clock speed mengukur seberapa cepat prosesor dapat mengeksekusi instruksi dalam satu detik. Kecepatan ini diukur dalam gigahertz (GHz), di mana 1 GHz setara dengan satu miliar siklus per detik. Clock speed yang lebih tinggi berarti prosesor dapat menyelesaikan instruksi dengan lebih cepat. Namun, faktor lain seperti jumlah core dan cache juga mempengaruhi kinerja secara keseluruhan.</li>
+                <li><strong>Cache Memory:</strong> Cache adalah memori cepat yang terintegrasi dengan prosesor untuk menyimpan data yang sering diakses. Dengan adanya cache, prosesor dapat mengakses data yang sudah disimpan tanpa harus mengambilnya dari memori utama, yang jauh lebih lambat. Cache terbagi dalam beberapa level: L1, L2, dan L3, di mana L1 adalah yang tercepat tetapi dengan kapasitas yang lebih kecil, sementara L3 lebih besar dan sedikit lebih lambat. Cache yang lebih besar dan lebih cepat memungkinkan prosesor bekerja dengan lebih efisien.</li>
+                <li><strong>Instruction Set:</strong> Set instruksi adalah kumpulan perintah dasar yang dipahami dan dieksekusi oleh prosesor. Setiap prosesor memiliki set instruksi yang berbeda. Intel dan AMD, sebagai dua produsen utama prosesor, menggunakan set instruksi yang berbeda. Intel menggunakan set instruksi x86, sementara ARM menggunakan set instruksi ARM, yang keduanya memiliki kelebihan dan kekurangan tergantung pada aplikasi yang dijalankan.</li>
+            </ul>
+            <p>Komponen-komponen ini bekerja sama untuk meningkatkan efisiensi dan kecepatan pemrosesan prosesor. Perkembangan teknologi dalam desain prosesor juga berfokus pada peningkatan jumlah core, kecepatan clock, serta optimisasi cache untuk mencapai kinerja yang lebih tinggi.</p>
+        </div>
+    
+        <div class="info-box">
+            <h3 id="Jenis-jenis-Prosesor">Jenis-jenis Prosesor</h3>
+            <p>Prosesor dapat dibedakan berdasarkan merek, arsitektur, dan kegunaan. Berikut adalah beberapa jenis prosesor yang sering digunakan dalam perangkat komputer:</p>
+            <ul>
+                <li><strong>Prosesor Intel:</strong> Intel adalah salah satu produsen prosesor terbesar di dunia. Seri prosesor Intel Core, seperti i3, i5, i7, dan i9, dirancang untuk berbagai keperluan, dari penggunaan sehari-hari hingga aplikasi dengan kebutuhan komputasi tinggi. Intel juga memproduksi prosesor dengan teknologi Hyper-Threading, yang memungkinkan setiap core untuk menangani dua thread secara bersamaan, meningkatkan kinerja pada aplikasi yang mendukung multitasking.</li>
+                <li><strong>Prosesor AMD:</strong> AMD (Advanced Micro Devices) menawarkan produk dengan kinerja yang sangat baik dengan harga yang lebih terjangkau dibandingkan Intel. AMD terkenal dengan lini prosesor Ryzen, yang memiliki banyak core dan thread, sehingga cocok untuk multitasking dan aplikasi yang membutuhkan banyak pemrosesan bersamaan. AMD juga dikenal dengan kemampuannya untuk menurunkan konsumsi daya, sehingga ideal untuk penggunaan laptop dan perangkat dengan daya rendah.</li>
+                <li><strong>Prosesor ARM:</strong> Prosesor berbasis arsitektur ARM banyak digunakan di perangkat mobile seperti smartphone, tablet, dan smartwatch. Prosesor ARM terkenal karena efisiensi energi yang sangat baik, menjadikannya ideal untuk perangkat yang membutuhkan daya rendah. Selain itu, ARM juga digunakan pada server dan perangkat IoT (Internet of Things) karena fleksibilitas dan konsumsi daya yang rendah.</li>
+            </ul>
+            <p>Memilih jenis prosesor yang tepat bergantung pada kebutuhan pengguna, seperti gaming, pengeditan video, atau penggunaan aplikasi multitasking. Setiap jenis prosesor memiliki kelebihan dan kekurangan yang harus dipertimbangkan untuk mendapatkan kinerja terbaik sesuai dengan kebutuhan.</p>
+        </div>
+    
+        <div class="info-box">
+            <h3 id="Perbandingan-Intel-vs-AMD">Perbandingan Intel vs AMD</h3>
+            <p>Intel dan AMD adalah dua produsen prosesor terbesar yang sering dibandingkan satu sama lain. Keduanya menawarkan prosesor dengan kinerja tinggi, tetapi mereka memiliki perbedaan dalam hal arsitektur, harga, dan efisiensi. Berikut adalah beberapa aspek yang perlu dipertimbangkan saat memilih antara Intel dan AMD:</p>
+            <ul>
+                <li><strong>Performa Single-threaded:</strong> Intel biasanya lebih unggul dalam aplikasi yang hanya menggunakan satu core prosesor (single-threaded), seperti pengolahan data tertentu atau aplikasi perangkat lunak lama. Intel sering kali lebih cepat dalam aplikasi yang tidak membutuhkan banyak core, tetapi membutuhkan kecepatan pemrosesan tinggi per inti.</li>
+                <li><strong>Performa Multi-threaded:</strong> AMD, di sisi lain, lebih unggul dalam aplikasi yang memanfaatkan banyak core secara bersamaan (multi-threaded), seperti pengeditan video, rendering, dan gaming. AMD menawarkan lebih banyak core dan thread dengan harga yang lebih terjangkau dibandingkan Intel, sehingga memberikan kinerja yang sangat baik untuk aplikasi yang membutuhkan banyak pemrosesan paralel.</li>
+                <li><strong>Harga:</strong> AMD cenderung menawarkan produk dengan harga lebih rendah dibandingkan Intel, tetapi dengan jumlah core dan thread yang lebih banyak. Hal ini membuat AMD menjadi pilihan yang lebih ekonomis untuk pengguna yang membutuhkan banyak core dan tidak terlalu mengutamakan performa single-threaded.</li>
+                <li><strong>Konsumsi Daya:</strong> Intel sering lebih efisien dalam hal konsumsi daya, dengan banyak prosesor Intel yang dirancang untuk penggunaan daya rendah. AMD, meskipun telah membuat kemajuan dalam hal efisiensi daya, masih cenderung sedikit lebih boros dalam hal konsumsi daya dibandingkan Intel.</li>
+            </ul>
+            <p>Pemilihan antara Intel dan AMD tergantung pada jenis penggunaan dan anggaran pengguna. Intel lebih cocok untuk aplikasi yang mengutamakan kinerja single-threaded, sementara AMD lebih cocok untuk multitasking dan aplikasi dengan pemrosesan paralel.</p>
+        </div>
+    </main>
+    
+
+    <footer>
+        &copy; 2024 Kelompok 3. All rights reserved.
+    </footer>
+
+</body>
+</html>
